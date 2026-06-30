@@ -249,3 +249,14 @@ a{color:inherit;text-decoration:none;}
 @media (max-width:760px){
   .map-split{grid-template-columns:1fr;}
 }
+
+/* ---------- 10. 서브페이지 슬라이드(설명형 deck) ---------- */
+/* 설명 페이지의 각 섹션을 한 화면 슬라이드로. .deck/.slide/.reveal/.dots는 메인과 공용 */
+.slide .content{width:100%;}
+.slide .content > .num:first-child{margin-bottom:10px;}
+.slide .content h2.sec{margin-top:2px;font-size:clamp(23px,2.6vw,30px);}
+.slide .content h2.sec:not(:first-child){margin-top:2px;}
+.slide .content .sec-sub{font-size:15px;margin-bottom:2px;}
+.slide .content p:first-of-type{margin-top:14px;}
+/* 슬라이드 안에서 카드/표가 너무 넓어 보이지 않게 본문 폭 살짝 제한(표/그리드는 예외로 전폭) */
+.slide .content > p{max-width:60ch;}
