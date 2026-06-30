@@ -260,3 +260,35 @@ a{color:inherit;text-decoration:none;}
 .slide .content p:first-of-type{margin-top:14px;}
 /* 슬라이드 안에서 카드/표가 너무 넓어 보이지 않게 본문 폭 살짝 제한(표/그리드는 예외로 전폭) */
 .slide .content > p{max-width:60ch;}
+
+/* ---------- 11. 메인 랜딩(일반 스크롤) · 퀵링크 · 갤러리 ---------- */
+.landing{padding-top:var(--header-h);}
+.lhero{background:var(--surf-2);background-image:radial-gradient(var(--bd) 1.2px,transparent 1.2px);background-size:20px 20px;border-bottom:1px solid var(--bd);}
+.lhero .wrap{padding-top:64px;padding-bottom:64px;}
+.lhero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--primary);margin-bottom:14px;}
+.lhero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.25;font-weight:700;letter-spacing:-.025em;color:var(--ink);max-width:18ch;}
+.lhero .lead{margin-top:16px;font-size:clamp(15px,1.5vw,18px);line-height:1.65;color:var(--ink-2);max-width:48ch;}
+.lhero .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.lhero .stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap;}
+.lsec{padding:54px 0;border-bottom:1px solid var(--bd);}
+.lsec:last-of-type{border-bottom:none;}
+.lsec h2.lt{font-size:clamp(22px,2.6vw,30px);font-weight:700;letter-spacing:-.01em;color:var(--ink);}
+.lsec .sec-sub{font-size:15px;color:var(--cap);margin-top:4px;}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+.sec-head .more{font-size:13px;color:var(--cap);}
+.sec-head .more:hover{color:var(--primary-deep);}
+
+.quicklinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px;}
+.qlink{display:flex;flex-direction:column;gap:8px;border:1px solid var(--bd);border-radius:var(--r-md);padding:18px;background:#fff;transition:border-color .15s,transform .15s;}
+.qlink:hover{border-color:var(--primary);transform:translateY(-2px);}
+.qlink i{font-size:22px;color:var(--primary);}
+.qlink .qn{font-size:14.5px;font-weight:600;}
+.qlink .qd{font-size:12.5px;color:var(--cap);}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:22px;}
+.gcard{border:1px solid var(--bd);border-radius:var(--r-md);overflow:hidden;background:#fff;}
+.gthumb{aspect-ratio:4/3;background:var(--surf);display:flex;align-items:center;justify-content:center;color:var(--bd-2);font-size:30px;border-bottom:1px solid var(--bd);}
+.gbody{padding:13px 15px;}
+.gt{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.4;}
+.gd{font-size:12.5px;color:var(--cap);margin-top:6px;font-feature-settings:"tnum" 1;}
+.tbl tbody tr[hidden],.gcard[hidden]{display:none;}
