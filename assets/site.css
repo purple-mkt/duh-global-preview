@@ -77,11 +77,10 @@ a{color:inherit;text-decoration:none;}
 .c-kor{background:#E2F2F2;color:#1E8A8A;}
 .c-done{background:#EEF0F2;color:var(--status-closed);}
 
-.pt{flex:1 1 200px;max-width:280px;border:1px solid var(--bd);border-radius:var(--r-md);padding:22px;background:#fff;transition:border-color .15s,transform .15s;}
-.pt:hover{border-color:var(--primary);transform:translateY(-3px);}
-.pt .ic{font-size:26px;color:var(--primary);}
-.pt .pn{font-size:16px;font-weight:600;margin-top:14px;}
-.pt .pd{font-size:14px;color:var(--cap);margin-top:5px;line-height:1.5;}
+.pt{flex:1 1 220px;max-width:320px;border:1px solid var(--bd);border-radius:var(--r-md);padding:20px 22px;background:#fff;transition:border-color .15s,background .15s;}
+.pt:hover{border-color:var(--primary);background:var(--surf-2);}
+.pt .pn{font-size:16.5px;font-weight:600;color:var(--ink);}
+.pt .pd{font-size:13.5px;color:var(--cap);margin-top:7px;line-height:1.55;}
 
 /* 표 — 세로선 없이 가로 hairline (KRDS 방식) */
 .tbl-wrap{overflow-x:auto;margin-top:20px;}
@@ -163,7 +162,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- 7. 서브페이지 (정보형 · 일반 스크롤) ---------- */
 .page{padding-top:var(--header-h);}
-.subhero{background:var(--surf-2);background-image:radial-gradient(var(--bd) 1.2px,transparent 1.2px);background-size:20px 20px;border-bottom:1px solid var(--bd);}
+.subhero{background:var(--surf-2);border-bottom:1px solid var(--bd);}
 .subhero .wrap{padding-top:40px;padding-bottom:40px;}
 .crumb{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--cap);margin-bottom:14px;}
 .crumb .ti{font-size:13px;}
@@ -281,7 +280,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- 11. 메인 랜딩(일반 스크롤) · 퀵링크 · 갤러리 ---------- */
 .landing{padding-top:var(--header-h);}
-.lhero{background:var(--surf-2);background-image:radial-gradient(var(--bd) 1.2px,transparent 1.2px);background-size:20px 20px;border-bottom:1px solid var(--bd);}
+.lhero{background:var(--surf-2);border-bottom:1px solid var(--bd);}
 .lhero .wrap{padding-top:64px;padding-bottom:64px;}
 .lhero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--primary);margin-bottom:14px;}
 .lhero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.25;font-weight:700;letter-spacing:-.025em;color:var(--ink);max-width:18ch;}
@@ -297,10 +296,9 @@ a{color:inherit;text-decoration:none;}
 .sec-head .more:hover{color:var(--primary-deep);}
 
 .quicklinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px;}
-.qlink{display:flex;flex-direction:column;gap:8px;border:1px solid var(--bd);border-radius:var(--r-md);padding:18px;background:#fff;transition:border-color .15s,transform .15s;}
-.qlink:hover{border-color:var(--primary);transform:translateY(-2px);}
-.qlink i{font-size:22px;color:var(--primary);}
-.qlink .qn{font-size:14.5px;font-weight:600;}
+.qlink{display:flex;flex-direction:column;gap:6px;border:1px solid var(--bd);border-radius:var(--r-md);padding:18px 20px;background:#fff;transition:border-color .15s,background .15s;}
+.qlink:hover{border-color:var(--primary);background:var(--surf-2);}
+.qlink .qn{font-size:15px;font-weight:600;color:var(--ink);}
 .qlink .qd{font-size:12.5px;color:var(--cap);}
 
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:22px;}
