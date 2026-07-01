@@ -292,3 +292,10 @@ a{color:inherit;text-decoration:none;}
 .gt{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.4;}
 .gd{font-size:12.5px;color:var(--cap);margin-top:6px;font-feature-settings:"tnum" 1;}
 .tbl tbody tr[hidden],.gcard[hidden]{display:none;}
+
+
+/* ---------- 12. 실제 로고 이미지 ---------- */
+.logo-img{height:38px;width:auto;display:block;}
+.brand-sub{font-size:14px;font-weight:600;color:var(--ink-2);border-left:1px solid var(--bd-2);padding-left:12px;line-height:1.1;}
+.logo-foot{height:24px;width:auto;display:block;}
+@media (max-width:860px){ .logo-img{height:32px;} .brand-sub{font-size:13px;padding-left:9px;} }
