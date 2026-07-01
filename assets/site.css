@@ -212,6 +212,7 @@ a{color:inherit;text-decoration:none;}
   .scroll-hint{display:none;}
 }
 @media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
   .deck{scroll-behavior:auto;}
   .reveal{transition:none;opacity:1;transform:none;}
   .scroll-hint .ti{animation:none;}
