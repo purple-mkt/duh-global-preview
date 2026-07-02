@@ -303,6 +303,8 @@ a{color:inherit;text-decoration:none;}
 .qlink:hover{border-color:var(--primary);background:var(--surf-2);}
 .qlink .qn{font-size:15px;font-weight:600;color:var(--ink);}
 .qlink .qd{font-size:12.5px;color:var(--cap);}
+.qic{color:var(--navy);margin-bottom:2px;}
+.qic svg{width:44px;height:44px;display:block;}
 
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:22px;}
 .gcard{border:1px solid var(--bd);border-radius:var(--r-md);overflow:hidden;background:#fff;}
@@ -320,10 +322,10 @@ a{color:inherit;text-decoration:none;}
 @media (max-width:860px){ .logo-img{height:32px;} .brand-sub{font-size:13px;padding-left:9px;} }
 
 
-/* ---------- 13. 전체 안내: 에디토리얼 숫자 목차 (아이콘 없음) ---------- */
+/* ---------- 13. 전체 안내: 에디토리얼 숫자 목차 + 스팟 일러스트 ---------- */
 .index-list{list-style:none;margin:24px 0 0;padding:0;border-top:2px solid var(--navy);}
 .index-list li{border-bottom:1px solid var(--bd);}
-.index-list a{display:grid;grid-template-columns:66px minmax(150px,220px) 1fr auto;align-items:center;gap:24px;padding:26px 6px;transition:background .15s;}
+.index-list a{display:grid;grid-template-columns:66px minmax(150px,220px) 1fr auto auto;align-items:center;gap:24px;padding:26px 6px;transition:background .15s;}
 .index-list a:hover{background:var(--surf-2);}
 .ix-no{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:700;color:var(--primary);line-height:1;}
 .ix-name{font-size:clamp(20px,2.3vw,26px);font-weight:700;letter-spacing:-.02em;color:var(--ink);}
@@ -331,10 +333,14 @@ a{color:inherit;text-decoration:none;}
 .ix-arw{font-size:20px;color:var(--bd-2);justify-self:end;transition:transform .15s,color .15s;}
 .index-list a:hover .ix-name{color:var(--primary-deep);}
 .index-list a:hover .ix-arw{transform:translateX(6px);color:var(--primary);}
+.ix-ic{justify-self:end;color:var(--navy);transition:color .15s;}
+.ix-ic svg{width:46px;height:46px;display:block;}
+.index-list a:hover .ix-ic{color:var(--primary);}
 @media (max-width:720px){
   .index-list a{grid-template-columns:40px 1fr auto;grid-template-areas:"no name arw" "no sub arw";gap:2px 14px;padding:18px 4px;}
   .ix-no{grid-area:no;align-self:start;font-size:20px;}
   .ix-name{grid-area:name;font-size:18px;}
   .ix-sub{grid-area:sub;font-size:12.5px;margin-top:3px;}
   .ix-arw{grid-area:arw;}
+  .ix-ic{display:none;}
 }
