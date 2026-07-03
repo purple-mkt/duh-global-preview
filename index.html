@@ -9,7 +9,7 @@
 <title>동아보건대학교 국제교류원 (시안)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.1.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="assets/site.css?v=14">
+<link rel="stylesheet" href="assets/site.css?v=15">
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -43,7 +43,18 @@
         </div>
       </div>
       <div class="lhero-media">
-        <img src="assets/img/hero.jpg" alt="동아보건대학교 캠퍼스 전경과 DONGA UNIVERSITY OF HEALTH 종합안내 조형물">
+        <div class="hero-carousel" data-autoplay="5000" aria-roledescription="캐러셀" aria-label="캠퍼스 사진">
+          <div class="hc-track">
+            <div class="hc-slide"><img src="assets/img/hero.jpg" alt="본관과 DONGA UNIVERSITY OF HEALTH 종합안내 조형물"></div>
+            <div class="hc-slide"><img src="assets/img/gate.jpg" alt="동아보건대학교 정문 진입로" loading="lazy"></div>
+            <div class="hc-slide"><img src="assets/img/road.jpg" alt="캠퍼스 진입로" loading="lazy"></div>
+            <div class="hc-slide"><img src="assets/img/dorm3.jpg" alt="유학생 기숙사 전경" loading="lazy"></div>
+            <div class="hc-slide"><img src="assets/img/cafeteria.jpg" alt="교내 학생식당" loading="lazy"></div>
+          </div>
+          <button class="hc-arrow hc-prev" type="button" aria-label="이전 사진"><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
+          <button class="hc-arrow hc-next" type="button" aria-label="다음 사진"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+          <div class="hc-dots"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -126,6 +137,7 @@
     </div>
   </div>
 </footer>
+<script src="assets/hero.js"></script>
 <script src="assets/nav.js"></script>
 </body>
 </html>
