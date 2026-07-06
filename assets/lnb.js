@@ -41,6 +41,13 @@
 
   function onScroll() {
     var line = offset();
+    // 페이지 최하단이면 마지막 섹션 활성화
+    // (짧은 페이지에서 마지막 섹션이 상단까지 못 올라와 '지났다' 판정이 안 되는 문제 대응)
+    var doc = document.documentElement;
+    if (window.innerHeight + window.pageYOffset >= doc.scrollHeight - 2) {
+      setActive(items[items.length - 1].link);
+      return;
+    }
     var current = items[0].link; // 아무 것도 안 지났으면 첫 항목
     for (var i = 0; i < items.length; i++) {
       var it = items[i];
