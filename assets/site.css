@@ -249,7 +249,8 @@ a{color:inherit;text-decoration:none;}
 .factgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px;}
 .fact{background:var(--surf);border-radius:var(--r-md);padding:18px 20px;}
 .fact .fl{font-size:13px;color:var(--cap);}
-.fact .fv{font-size:20px;font-weight:700;margin-top:5px;font-feature-settings:"tnum" 1;color:var(--ink);}
+.fact .fv{font-size:20px;font-weight:700;margin-top:5px;font-feature-settings:"tnum" 1;color:var(--ink);line-height:1.32;word-break:keep-all;overflow-wrap:anywhere;}
+.fact .fv .fu{display:block;margin-top:4px;font-size:12.5px;font-weight:500;color:var(--cap);line-height:1.45;letter-spacing:0;font-feature-settings:normal;}
 
 /* 게시판 */
 .filter-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px;}
