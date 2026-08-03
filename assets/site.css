@@ -449,3 +449,33 @@ a.nrow:focus-visible{outline:2px solid var(--primary);outline-offset:-2px;}
   .ix-arw{grid-area:arw;}
   .ix-ic{display:none;}
 }
+/* ── 다국어 헤더 대응 (긴 라벨 언어: 베트남어·영어) ─────────────────────
+   한국어는 라벨이 짧아 가로 메뉴가 한 줄에 들어가지만, 베트남어·영어는
+   2~4배 길어 메뉴가 여러 줄로 쪼개지며 헤더가 무너진다. 아래로 방지한다. */
+.nav-item>a{white-space:nowrap;}
+.brand-sub{white-space:nowrap;}
+
+/* 라벨이 긴 언어는 글자·여백을 줄여 한 줄에 담는다 */
+html[lang="vi"] .nav,html[lang="en"] .nav{margin-left:18px;gap:0;font-size:13.5px;}
+html[lang="vi"] .nav-item>a,html[lang="en"] .nav-item>a{padding:0 10px;}
+html[lang="vi"] .brand-sub,html[lang="en"] .brand-sub{font-size:12.5px;padding-left:10px;}
+
+/* 그래도 좁아지면 데스크톱보다 이른 시점에 햄버거 메뉴로 전환 */
+@media (max-width:1100px){
+  html[lang="vi"] .gnb::after,html[lang="en"] .gnb::after{display:none;}
+  html[lang="vi"] .nav-toggle,html[lang="en"] .nav-toggle{display:flex;}
+  html[lang="vi"] .nav,html[lang="en"] .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;align-self:auto;flex:none;justify-content:flex-start;margin-left:0;background:#fff;border-top:1px solid var(--bd);box-shadow:0 14px 28px rgba(1,37,66,.12);max-height:76vh;overflow-y:auto;padding:6px 0;gap:0;font-size:15px;}
+  html[lang="vi"] .site-header.nav-open .nav,html[lang="en"] .site-header.nav-open .nav{display:flex;}
+  html[lang="vi"] .nav-item,html[lang="en"] .nav-item{flex-direction:column;align-items:stretch;}
+  html[lang="vi"] .nav-item>a,html[lang="en"] .nav-item>a{height:auto;padding:14px 22px;font-weight:600;color:var(--ink);border-bottom:none;white-space:normal;}
+  html[lang="vi"] .nav-item+.nav-item,html[lang="en"] .nav-item+.nav-item{border-top:1px solid var(--bd);}
+  html[lang="vi"] .submenu,html[lang="en"] .submenu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;border-radius:0;min-width:0;padding:0 0 8px;background:transparent;}
+  html[lang="vi"] .submenu a,html[lang="en"] .submenu a{padding:9px 22px 9px 38px;color:var(--ink-2);white-space:normal;text-align:left;}
+}
+
+/* 좁은 데스크톱(861~1000px)에서는 모든 언어의 메뉴를 조금 조여 넘침 방지 */
+@media (min-width:861px) and (max-width:1000px){
+  .nav{margin-left:18px;gap:0;font-size:14px;}
+  .nav-item>a{padding:0 10px;}
+  .brand-sub{font-size:13px;padding-left:9px;}
+}
