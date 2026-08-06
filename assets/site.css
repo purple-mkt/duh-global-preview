@@ -556,3 +556,12 @@ html[lang="vi"] .brand-sub,html[lang="en"] .brand-sub{font-size:12.5px;padding-l
     display:inline-flex;align-items:center;min-height:36px;padding:0 7px;
   }
 }
+
+/* ---------- 16. 썸네일이 붙는 카드 (2026-08-05) ----------
+   .pt 는 원래 글자만 있는 카드다. 문화교류처럼 '무엇을 하는지'가 그림으로 전달되는 항목에만
+   위에 사진을 얹는다. 정보 카드(기숙사비·납부 등)와 진로 분야 목록에는 쓰지 않는다. */
+.pt.has-thumb{padding:0;overflow:hidden;display:flex;flex-direction:column;}
+.pt.has-thumb .pt-thumb{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;
+  border-bottom:1px solid var(--bd);}
+.pt.has-thumb .pt-body{padding:15px 17px 17px;}
+.pt.has-thumb:hover .pt-thumb{filter:brightness(1.03);}
